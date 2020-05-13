@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchTerm = ""
+    @State private var feed: NewsFeed = NewsFeed(totalResults: 0, articles: [])
     
-    let testData = NewsFeed(totalResults: 10, articles: [Article(source: Source(id: nil, name: "Test Name"), author: "Test Author", title: "Test Title", description: "Test description", url: "Test URL", urlToImage: "Test URL Image", publishedAt: "2020-05-12T13:00:46Z", content: "Test Content"), Article(source: nil, author: "Test Author", title: "Test Title", description: "Test description", url: "Test URL", urlToImage: "Test URL Image", publishedAt: "2020-05-12T13:00:46Z", content: "Test Content")])
+    @State private var searchTerm = ""
     
     var body: some View {
         NavigationView {
@@ -19,17 +19,22 @@ struct ContentView: View {
                 TextField("Search", text: $searchTerm, onCommit: fetchData)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                List(testData.articles ?? []) { article in
-                    HStack {
-                        URLImageView()
-                            .frame(width: 100)
-                        VStack(alignment: .leading) {
-                            Text(article.title ?? "Unknown title")
-                                .font(.headline)
-                                .fixedSize(horizontal: false, vertical: true)
-                            Text("\(article.author ?? "Unknown author") | \(article.source?.name ?? "Unknown name") | \(article.formattedDate)")
-                                .font(.subheadline)
-                                .foregroundColor(Color.gray)
+                
+                List(feed.articles ?? []) { article in
+                    NavigationLink(destination: ArticleDetailView(article: article)) {
+                        HStack {
+                            URLImageView()
+                                .frame(width: 100)
+                            
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text(article.title ?? "Unknown title")
+                                    .font(.custom("Montserrat-Medium.ttf", size: 16))
+                                    .fixedSize(horizontal: false, vertical: true)
+                                
+                                Text("\(article.author ?? "Unknown author") | \(article.source?.name ?? "Unknown name") | \(article.formattedDate)")
+                                    .font(.custom("Montserrat-Italic.ttf", size: 12))
+                                    .foregroundColor(Color.gray)
+                            }
                         }
                     }
                 }
@@ -39,7 +44,11 @@ struct ContentView: View {
     }
     
     func fetchData() {
+        let trimmed = searchTerm.filter {!$0.isWhitespace && !$0.isNewline}
         
+        APICall().loadData(search: trimmed) { (NewsFeed) in
+            self.feed = NewsFeed
+        }
     }
 }
 

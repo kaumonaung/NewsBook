@@ -17,6 +17,12 @@
 		353AFDC1246C108400784C8E /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AFDC0246C108400784C8E /* NewsFeed.swift */; };
 		353AFDC3246C10C700784C8E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AFDC2246C10C700784C8E /* Article.swift */; };
 		353AFDC5246C131D00784C8E /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AFDC4246C131D00784C8E /* URLImageView.swift */; };
+		353AFDC7246C151D00784C8E /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AFDC6246C151D00784C8E /* APICall.swift */; };
+		353AFDCB246C29A400784C8E /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AFDCA246C29A400784C8E /* ArticleDetailView.swift */; };
+		353AFDD2246C2B6300784C8E /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353AFDCE246C2B6300784C8E /* Montserrat-Italic.ttf */; };
+		353AFDD3246C2B6300784C8E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353AFDCF246C2B6300784C8E /* Montserrat-Medium.ttf */; };
+		353AFDD4246C2B6300784C8E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353AFDD0246C2B6300784C8E /* Montserrat-Bold.ttf */; };
+		353AFDD5246C2B6300784C8E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353AFDD1246C2B6300784C8E /* Montserrat-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		353AFDC0246C108400784C8E /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
 		353AFDC2246C10C700784C8E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		353AFDC4246C131D00784C8E /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
+		353AFDC6246C151D00784C8E /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		353AFDCA246C29A400784C8E /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArticleDetailView.swift; path = NewsBook/Models/ArticleDetailView.swift; sourceTree = SOURCE_ROOT; };
+		353AFDCE246C2B6300784C8E /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		353AFDCF246C2B6300784C8E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		353AFDD0246C2B6300784C8E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		353AFDD1246C2B6300784C8E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +76,8 @@
 		353AFDA5246C0EF000784C8E /* NewsBook */ = {
 			isa = PBXGroup;
 			children = (
+				353AFDCD246C2AAE00784C8E /* Fonts */,
 				353AFDBF246C106F00784C8E /* Models */,
-				353AFDBE246C106A00784C8E /* ViewModels */,
 				353AFDBD246C106500784C8E /* Views */,
 				353AFDA6246C0EF000784C8E /* AppDelegate.swift */,
 				353AFDA8246C0EF000784C8E /* SceneDelegate.swift */,
@@ -88,17 +100,11 @@
 		353AFDBD246C106500784C8E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				353AFDCA246C29A400784C8E /* ArticleDetailView.swift */,
 				353AFDAD246C0EF000784C8E /* ContentView.swift */,
 				353AFDC4246C131D00784C8E /* URLImageView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		353AFDBE246C106A00784C8E /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		353AFDBF246C106F00784C8E /* Models */ = {
@@ -107,8 +113,20 @@
 				353AFDAA246C0EF000784C8E /* NewsBook.xcdatamodeld */,
 				353AFDC0246C108400784C8E /* NewsFeed.swift */,
 				353AFDC2246C10C700784C8E /* Article.swift */,
+				353AFDC6246C151D00784C8E /* APICall.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		353AFDCD246C2AAE00784C8E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				353AFDD0246C2B6300784C8E /* Montserrat-Bold.ttf */,
+				353AFDCE246C2B6300784C8E /* Montserrat-Italic.ttf */,
+				353AFDCF246C2B6300784C8E /* Montserrat-Medium.ttf */,
+				353AFDD1246C2B6300784C8E /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +188,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				353AFDB6246C0EF200784C8E /* LaunchScreen.storyboard in Resources */,
+				353AFDD3246C2B6300784C8E /* Montserrat-Medium.ttf in Resources */,
+				353AFDD5246C2B6300784C8E /* Montserrat-Regular.ttf in Resources */,
+				353AFDD4246C2B6300784C8E /* Montserrat-Bold.ttf in Resources */,
 				353AFDB3246C0EF200784C8E /* Preview Assets.xcassets in Resources */,
 				353AFDB0246C0EF200784C8E /* Assets.xcassets in Resources */,
+				353AFDD2246C2B6300784C8E /* Montserrat-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +210,8 @@
 				353AFDC3246C10C700784C8E /* Article.swift in Sources */,
 				353AFDAE246C0EF000784C8E /* ContentView.swift in Sources */,
 				353AFDC1246C108400784C8E /* NewsFeed.swift in Sources */,
+				353AFDCB246C29A400784C8E /* ArticleDetailView.swift in Sources */,
+				353AFDC7246C151D00784C8E /* APICall.swift in Sources */,
 				353AFDA9246C0EF000784C8E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
