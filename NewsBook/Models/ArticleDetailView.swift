@@ -16,7 +16,7 @@ struct ArticleDetailView: View {
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: 10) {
-                URLImageView()
+                URLImageView(urlString: article.urlToImage)
                     .frame(minWidth: 0, maxHeight: .infinity)
                     .padding(.bottom)
                 

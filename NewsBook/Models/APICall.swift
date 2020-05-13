@@ -13,7 +13,7 @@ class APICall {
     let apiKey = "2357aeac571b4e318c00d027ce77524f"
     
     func loadData(search: String, completion: @escaping (NewsFeed) -> ()) {
-        guard let url = URL(string: "https://newsapi.org/v2/everything?q=\(search)&sortBy=relevancy&apiKey=\(apiKey)") else {
+        guard let url = URL(string: "https://newsapi.org/v2/everything?q=\(search)&sortBy=relevancy&language=en&apiKey=\(apiKey)") else {
             print("Invalid URL")
             return
         }
@@ -30,7 +30,7 @@ class APICall {
                 if let newsFeed = try? JSONDecoder().decode(NewsFeed.self, from: data) {
                     completion(newsFeed)
                 } else {
-                    print(error)
+                    print(error ?? "\(String(describing: error?.localizedDescription))")
                 }
             }
         }.resume()

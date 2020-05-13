@@ -23,7 +23,7 @@ struct ContentView: View {
                 List(feed.articles ?? []) { article in
                     NavigationLink(destination: ArticleDetailView(article: article)) {
                         HStack {
-                            URLImageView()
+                            URLImageView(urlString: article.urlToImage)
                                 .frame(width: 100)
                             
                             VStack(alignment: .leading, spacing: 10) {

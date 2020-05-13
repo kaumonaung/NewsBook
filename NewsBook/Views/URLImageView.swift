@@ -9,8 +9,16 @@
 import SwiftUI
 
 struct URLImageView: View {
+    @ObservedObject var urlImageModel: URLImageLoader
+    
+    init(urlString: String?) {
+        urlImageModel = URLImageLoader(urlString: urlString)
+    }
+    
+    static var defaultImage = UIImage(named: "placeholder")
+    
     var body: some View {
-        Image("placeholder")
+        Image(uiImage: urlImageModel.image ?? URLImageView.defaultImage!)
             .resizable()
             .scaledToFit()
     }
@@ -18,6 +26,6 @@ struct URLImageView: View {
 
 struct URLImageView_Previews: PreviewProvider {
     static var previews: some View {
-        URLImageView()
+        URLImageView(urlString: "https://unsplash.com/photos/T7K4aEPoGGk")
     }
 }

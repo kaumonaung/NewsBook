@@ -23,6 +23,7 @@
 		353AFDD3246C2B6300784C8E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353AFDCF246C2B6300784C8E /* Montserrat-Medium.ttf */; };
 		353AFDD4246C2B6300784C8E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353AFDD0246C2B6300784C8E /* Montserrat-Bold.ttf */; };
 		353AFDD5246C2B6300784C8E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353AFDD1246C2B6300784C8E /* Montserrat-Regular.ttf */; };
+		353AFDD7246C2DDF00784C8E /* URLImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AFDD6246C2DDF00784C8E /* URLImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		353AFDCF246C2B6300784C8E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		353AFDD0246C2B6300784C8E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		353AFDD1246C2B6300784C8E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		353AFDD6246C2DDF00784C8E /* URLImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				353AFDC0246C108400784C8E /* NewsFeed.swift */,
 				353AFDC2246C10C700784C8E /* Article.swift */,
 				353AFDC6246C151D00784C8E /* APICall.swift */,
+				353AFDD6246C2DDF00784C8E /* URLImageLoader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353AFDD7246C2DDF00784C8E /* URLImageLoader.swift in Sources */,
 				353AFDC5246C131D00784C8E /* URLImageView.swift in Sources */,
 				353AFDA7246C0EF000784C8E /* AppDelegate.swift in Sources */,
 				353AFDAC246C0EF000784C8E /* NewsBook.xcdatamodeld in Sources */,
